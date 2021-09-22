@@ -1,0 +1,76 @@
+//*****************************************//
+/*#include <stdio.h>
+
+int main(void) 
+{
+    
+  // string variable
+  char str[6] = "Hello";
+  
+  // pointer variable
+  char *ptr = str;
+  
+  // print the string
+  while(*ptr != '\0') {
+    printf("%c", *ptr);
+    
+    // move the ptr pointer to the next memory location
+    ptr++;
+  }
+  
+  return 0;
+}*/
+
+//**********************Using pointer to store string******************************//
+
+/*#include <stdio.h>
+
+int main(void) 
+{
+    
+  // pointer variable to store string
+  char *strPtr = "Hello";
+  
+  // temporary pointer variable
+  char *t = strPtr;
+  
+  // print the string
+  while(*t != '\0') {
+    printf("%c", *t);
+    
+    // move the t pointer to the next memory location
+    t++;
+  }
+  
+  return 0;
+}*/
+
+//***********************Accessing values pointed by array of pointers****************************//
+#include <stdio.h>
+
+int main(void) {
+    
+  // array of pointers
+  char *cityPtr[4] = 
+  {
+    "Chennai",
+    "Kolkata",
+    "Mumbai",
+    "New Delhi"
+  };
+  
+  // temporary variable
+  int r, c;
+  
+  // print cities
+  for (r = 0; r < 4; r++) {
+    c = 0;
+    while(*(cityPtr[r] + c) != '\0') {
+      printf("%c", *(cityPtr[r] + c));
+      c++;
+    }
+    printf("\n");
+  }
+  
+  return 0;
+}
