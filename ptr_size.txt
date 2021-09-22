@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+struct Emp
+{
+  char Ename[30];
+  int Eid;
+  float Esal;
+};
+int main()
+{
+  int *int_ptr;
+  char* char_ptr;
+  struct Emp* E;
+  printf("sizeof int_ptr is:%ld\n",sizeof(int_ptr));
+  printf("sizeof char_ptr is:%ld\n",sizeof(char_ptr));
+  printf("sizeof struct Emp is:%ld\n",sizeof(E));
+  int a=25;
+  printf("size of a:%ld",sizeof(a));
+  return 0;
+}
